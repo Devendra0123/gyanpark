@@ -1,0 +1,38 @@
+.timer{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+  .countDown{
+    display: flex;
+    align-items: center;
+    background-color: blueviolet;
+    font-family: "Roboto",sans-serif;
+    font-size: 17px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .inactive{
+    display: flex;
+    align-items: center;
+    background-color: rgb(235, 241, 241);
+    font-family: "Roboto",sans-serif;
+    font-size: 17px;
+    text-align: center;
+    color: rgb(97, 94, 94);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  
+  @media screen and (max-width: 500px) {
+    .timer{
+      padding: 0px;
+    }
+    .inactive{
+      padding: 5px;
+    }
+}

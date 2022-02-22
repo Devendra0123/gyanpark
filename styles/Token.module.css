@@ -1,0 +1,218 @@
+.generateToken,.allUsers{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #313552;
+}
+
+.tokenHeaders{
+    display: flex;
+    align-items: center;
+    background-color: darkslategray;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.headerTitle{
+    font-family: 'Roboto',sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 20px;
+    color: white;
+    letter-spacing: 1.3px;
+    cursor: pointer;
+    z-index: 2;
+    text-align: center;
+}
+
+.headerTitle:first-child{
+    margin-left: 0;
+}
+.active{
+    position: relative;
+    background-color: brown;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+.generateTokenForm{
+    width: 300px;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(161, 157, 157, 0.45);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+}
+
+.formInput{
+    border: none;
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.userList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    font-family: "Roboto",sans-serif;
+    padding: 10px 12px;
+}
+
+.userName{
+    color: white;
+    font-size: 16px;
+}
+
+.userEmail{
+    color: rgb(230, 227, 55);
+}
+.userList:nth-child(even){background-color: #313030;}
+.userList:nth-child(odd){background-color: rgba(172, 160, 160, 0.624);}
+.userList:hover{
+    background-color: rgb(109, 57, 231);
+    cursor: pointer;
+   
+}
+.userList:hover .td{
+    color: white;
+}
+.submitBtn{
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: brown;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 10;
+    border-radius: 10px;
+}
+.cross {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 5px;
+  top: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.line1,
+.line2 {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+}
+.line1 {
+  transform: rotate(50deg);
+}
+.line2 {
+  transform: rotate(-50deg);
+}
+
+.contestLists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.contestListItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.tokenListItem{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-family: "Roboto",sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 15px;
+    color: brown;
+}
+.tokenListItem:nth-child(even){background-color: #f2f2f2;}
+.tokenListItem:nth-child(odd){background-color: rgba(172, 160, 160, 0.624);}
+.tokenListItem:hover{
+    background-color: rgb(109, 57, 231);
+    cursor: pointer;
+    color: white;
+}
+.tokenListItem_btn{
+    padding: 7px 10px;
+    border: 2px solid green;
+    color: green;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+.tokenListItem_btn:hover{
+    background-color: green;
+    color: white;
+}
+.activeContest{
+    background-color: teal;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .tokenHeaders{
+        width: 100%;
+        padding: 10px 0;
+    }
+    .generateTokenForm,.tokenLists,.tokenTally,.contestantWithToken{
+        width: 100%
+    }
+    .contestListItem{
+        width: 95%;
+      }
+      .tokenListItem{
+        width: 95%;
+    }    
+.userList{
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+  }

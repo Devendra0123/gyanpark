@@ -1,0 +1,290 @@
+.checkoutSteps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.checkoutSteps_top{
+    display: flex;
+    align-items: center;
+    width: 500px;
+  }
+  .checkoutStep1{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgb(90, 88, 88);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hrLine{
+    flex-grow: 1;
+    height: 3px;
+    background-color: grey;
+  }
+  .checkout_desc{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    color: white;
+  }
+  .activeStep{
+      background-image: linear-gradient(45deg,red,rgb(245, 88, 88));
+  }
+  .shipping_info,.confirmshippingdetails,.payment,.checkoutFailurePage{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #313552;;
+  }
+  .shipping_info_title{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    border-bottom: 2px solid rgb(230, 77, 77);
+    padding: 5px;
+  }
+  .shipping_info_container_form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .name,.adress,.city,.mobile{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .formInput{
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    background-color: transparent;
+    flex-grow: 1;
+}
+  .shippingBtn{
+      padding: 10px 15px;
+      border: none;
+      background-image: linear-gradient(45deg,red,rgb(245, 88, 88));
+      color: white;
+      font-size: 16px;
+      margin-top: 20px;
+  }
+  .confirmshippingdetails_main{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    color: white;
+  }
+  .confirmshippingdetails_title_text{
+    padding: 5px;
+  }
+  .confirmshippingdetails_info_text{
+    font-family: "Roboto",sans-serif;
+    padding: 5px 10px;
+    text-align: left;  
+  }
+  .items_info{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .items_info_img{
+    object-fit: contain;
+    width: 100px;
+  }
+  .items_info_left{
+    display: flex;
+    align-items: center;
+  }
+  .confirmshippingdetails_btn{
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-image: linear-gradient(45deg,red,rgb(245, 88, 88));
+    color: white;
+    margin-top: 15px;
+  }
+  .payment_option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 20px;
+  margin-top: 50px;
+  }
+  .payment_option_title{
+    border-bottom: 2px solid rgb(230, 77, 77);
+    margin-top: 30px;
+  }
+  .moneyIcon{
+    position: absolute;
+    top: -30px;
+    width: 70px;
+    height: 70px;
+    background: rgba( 164, 158, 158, 0.25 );
+box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 50%;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .esewaIcon,.cashOnDelivery{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.3s ease-out;
+    background: rgba( 164, 158, 158, 0.25 );
+box-shadow: 0 5px 20px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  .cashOnDelivery{
+    margin-top: 15px;
+  }
+  .cashOnDelivery:hover{
+    background-image: linear-gradient(to right,grey,black);
+    color: white
+  }
+  .esewaImg{
+    width: 100px;
+  }
+
+  .esewa_btn{
+    border: none;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    padding: 0;
+    width: max-content;
+    margin-top: 15px;
+    border-radius: 15px;
+  }
+
+  .failure_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+  .cross {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5px;
+    top: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .line1,
+  .line2 {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+  }
+  .line1 {
+    transform: rotate(50deg);
+  }
+  .line2 {
+    transform: rotate(-50deg);
+  }
+  .cashOnDelivery_popup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    z-index: 15;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+  }
+
+  @media screen and (max-width: 700px) {
+    .confirmshippingdetails_main{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .failure_div{
+      width: 95%;
+    }
+    }
+
+  @media screen and (max-width: 560px) {
+    .checkoutSteps{
+     width: 100%;
+  }
+    .checkoutSteps_top{
+      width: 85%;
+    }
+    .checkout_desc{
+      width: 100%;
+      padding-left: 5px;
+      text-align: center;
+    }
+    .shipping_info_container_form{
+      width: 100%
+    }
+    .name,.adress,.city,.mobile{
+      width: 95%;
+    }
+    }
+
+    
+    @media screen and (max-width: 350px) {
+      .esewaIcon,.cashOnDelivery{
+        width: 90%;
+        padding: 15px 5px;
+      }
+      .cashOnDelivery_popup{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: white;
+        z-index: 15;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%,-50%)
+      }
+      }

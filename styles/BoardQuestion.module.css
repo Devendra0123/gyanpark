@@ -1,0 +1,395 @@
+.boardquestion,.uploadQuestionPaper,.updateQuestionPaper{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #313552;
+}
+.programwise{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+  padding: 10px 20px;
+}
+.boardquestion_lists{
+  width: 100%;
+  display: flex; 
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding-left: 0;
+}
+.boardquestion_lists::-webkit-scrollbar {
+  display: none;
+}
+.boardquestion_lists_item{
+    width: 150px;
+    height:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 2px grey;
+    margin-top: 20px;
+    transition: 0.2s ease-out;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .boardquestion_lists_item:first-child{
+    margin-left: 0;
+  }
+  .programTitle{
+    padding: 5px 20px;
+    border-bottom: 3px solid teal;
+    background: rgba(187, 48, 48, 1);
+    box-shadow: 10px 20px 50px 10px rgb(115, 228, 228) inset;
+    text-align: center;
+    font-family: monospace,cursive;
+    color: brown;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+  }
+  .boardquestion_lists_item_background{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background-image: radial-gradient(rgb(219, 64, 90),rgb(245, 18, 48));
+    border-radius: 15px;
+  }
+  .boardquestion_lists_item_content{
+    width: 100%;
+    height: 200px;
+    background-color:white;
+    z-index: 2;
+    opacity: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    text-align: center;
+    border-radius: 15px;
+  }
+  .boardQuestionYear,.yearwise_questionPaper{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #313552;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boardQuestion_download_section{
+    display: flex;
+    align-items: center;
+  }
+  .boardProgramTitle{
+    padding: 5px 20px;
+    border-bottom: 3px solid #f8485e;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background: rgba(187, 48, 48, 1);
+    box-shadow: 10px 20px 50px 10px pink inset;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-family: monospace;
+    font-size: 20px;
+  }
+  .questionYear{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 2px grey;
+    cursor: pointer;
+  }
+  .yearwise_questionPaper_imgages{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+  .yearwise_questionPaper_imgages_item{
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .yearwise_questionPaper_imgages_item:first-child{
+    margin-left: 0;
+  }
+  .questionPaper_preview_title{
+    font-size: 17px;
+    margin-top: 20px;
+    color: rgb(185, 190, 175);
+    font-family: "Roboto",sans-serif;
+    padding: 10px;
+    text-align: center;
+  }
+  .page_preview_dialogue_box{
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 70;
+    transition: 0.3s ease-out;
+    border-radius: 5px;
+    background-color: pink;
+  }
+  .page_preview_dialogue_box_img{
+    object-fit: contain;
+    width: 100%;
+    height: 600px;
+  }
+  .cross {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+    top: 0px;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .line1,
+  .line2 {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+  }
+  .line1 {
+    transform: rotate(50deg);
+  }
+  .line2 {
+    transform: rotate(-50deg);
+  }
+.uploadQuestionPaper_container,.updateQuestionPaper_container{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 20px;
+  margin-top: 50px;
+  position: relative;
+}
+.upload_question_title,.update_question_title{
+  border-bottom: 2px solid rgb(230, 77, 77);
+  font-size: 18px;
+}
+.update_question_title{
+  margin-top: 30px;
+}
+.form{
+  width: 100%;
+}
+.formSelect{
+  border: none;
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 10px;
+  outline: none;
+  font-size: 16px;
+  font-family: "Roboto",sans-serif;
+  border-radius: 5px;
+}
+.form_fileInput{
+  width: 100%;
+}
+.form_fileInput::file-selector-button{
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  margin-top: 10px;
+  font-family: "Roboto",sans-serif;
+  font-size: 16px;
+  transition: all 0.5s;
+  padding:8px 12px;
+  border-radius: 5px;
+  background-color: grey;
+}
+.upload_btn,.update_btn{
+  width: 100%;
+  padding: 10px 15px;
+  font-family: "Roboto",sans-serif;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right,coral,red);
+  border: none;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 1.5px;
+}
+.image_preview_div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.preview_img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.id_div{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 10px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  position: absolute;
+  top: -20px;
+  padding: 10px;
+}
+.id_input{
+  border: none;
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 10px;
+  outline: none;
+  font-size: 16px;
+  font-family: "Roboto",sans-serif;
+  border-radius: 5px;
+  margin-top: 0;
+  text-align: center;
+  font-weight: 600;
+}
+.selectImg{
+  margin-top: 10px;
+}
+.selectImg::-webkit-file-upload-button{
+  visibility: hidden;
+}
+.selectImg::before {
+  content: 'select question paper';
+  display: inline-block;
+  background: linear-gradient(to top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.message{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 10;
+  border-radius: 10px;
+}
+.cross {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 5px;
+  top: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.line1,
+.line2 {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+}
+.line1 {
+  transform: rotate(50deg);
+}
+.line2 {
+  transform: rotate(-50deg);
+}
+
+@media screen and (max-width: 800px) {
+  .yearwise_questionPaper_imgages{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .page_preview_dialogue_box{
+    width: 95%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+  }
+  .page_preview_dialogue_box_img{
+    object-fit: contain;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page_preview_dialogue_box_img{
+    object-fit: contain;
+    width: 100%;
+    height: 300px;
+  }
+  .yearwise_questionPaper_imgages{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .page_preview_dialogue_box{
+    width: 95%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .uploadQuestionPaper_container,.updateQuestionPaper_container{
+    width: 100%;
+    padding: 20px 10px;
+  }
+}

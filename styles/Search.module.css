@@ -1,0 +1,75 @@
+.searchProduct{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #655D8A;;
+}
+.store_page_search_input{
+    border: none;
+    background-color: rgba(27, 27, 27, 0.822);
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    padding: 10px 15px;
+    width: 300px;
+    color: white;
+    height: 30px;
+  }
+  .store_page_search_input::placeholder {
+    color: white; 
+  }
+  .store_page_search_btn{
+    border: none;
+    padding: 6px 10px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-family: monospace;
+  }
+  .store_page_searchBar_searchBox{
+    display: flex;
+    align-items: center;
+  }
+  .store_page_searchBar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .store_page_storeItems{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    .store_page_searchBar{
+      width: 100%;
+    }
+    .store_page_searchBar_searchBox{
+      width: 100%;
+      padding: 0 10px;
+  }
+  .store_page_search_input{
+    flex: 1;
+    padding: 5px;
+  }
+  .store_page_search_btn{
+    padding: 6px 5px;
+    color: white;
+    font-size: 14px;
+  }
+  .ebookCard_ring {
+   display: none;
+  }
+    }

@@ -1,116 +1,432 @@
-.container {
-  padding: 0 2rem;
-}
-
-.main {
+.topDivClass{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background-color: #313552;
 }
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
+.navbar{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  z-index: 50;
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.navbar_wrapper{
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
 }
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.logo{
+  color: rgb(236, 241, 243);
+  font-family: 'Monoton', cursive;
+  cursor: pointer;
+  text-shadow: 5px 5px 7px grey;
 }
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.logo_span{
+  color: brown;
 }
-
-.title,
-.description {
+.navItems{
+  padding: 10px 20px;
+  background-color: rgb(93, 93, 231);
+  border-radius: 25px;
+}
+.navItems_lists{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.navItem{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 25px;
+  position: relative;
   text-align: center;
+  z-index: 5;
 }
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.navItem:before{
+  width: 0px;
+  height: 0px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(to right, #F6E6CB,#E7D4B5);
+  z-index: -1;
+  border-radius: 24% 90% 2% 53%;
+  transition: 0.3s ease-out;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.navItem:hover{
+  color: black;
+ }
+.navItem:hover:before{
+ width: 60px;
+ height: 60px;
 }
-
-.grid {
+.navItem:first-child {
+  margin-left: 0;
+}
+.active{
+  color: rgb(222, 222, 230);
+}
+.active:before{
+  width: 60px;
+  height: 60px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(to right, #fa3232,#e69f2e);
+  z-index: -1;
+  border-radius: 24% 90% 2% 53%;
+}
+.adminBtn{
+  padding: 10px 15px;
+  border: none;
+  background-color: orangered;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.login_signUp{
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
 }
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+.navbar_signUp{
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  background-color: #f6f8f0;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  color: rgb(12, 12, 12);
+}
+.mbl_signUp,.mbl_login{
+  display: none;
+}
+.navbar_signUp:hover .signUp_text{
+   color:white;
+}
+.navbar_login{
+   background-color: #f6f8f0;
+   border: none;
+   padding: 10px 15px;
+   margin-left: 10px;
+   color: rgb(15, 15, 15);
+   font-size: 16px;
+   border-radius: 5px;
+}
+.signUp_text{
+  color: coral;
+}
+.forContest_text{
+  font-family: 'Cookie', cursive;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  font-weight: 500;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.blog_home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+.blog_home_info_title{
+  padding: 5px 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    margin-bottom: 20px;
+    background: rgba(187, 48, 48, 1);
+    box-shadow: 10px 20px 50px 10px teal inset;
+    text-align: center;
+    color: #F6E6CB;
   }
+
+  .blogCard{
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 4px 6px 11px -1px rgba(0,0,0,0.67);
+-webkit-box-shadow: 4px 6px 11px -1px rgba(0,0,0,0.67);
+-moz-box-shadow: 4px 6px 11px -1px rgba(0,0,0,0.67);
+background-color: blanchedalmond;
+padding: 10px;
+border-radius: 10px;
+margin-top: 20px;
+  }
+ 
+
+  .blogCard_title{
+    border-left: 5px solid orangered;
+    padding-left: 5px;
+  }
+
+  .blogCard_desc_text{
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+  }
+
+  .blogCard_cta_btn{
+    border: none;
+    background-image: linear-gradient(to right,#f8485e,blue);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+  }
+
+  .blog_home_body{
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .blogCard_image{
+    width: 170px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .blog_home_cta_btn{
+      background-color: brown;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      letter-spacing: 1.3px;
+      font-size: 15px;
+      transition: 0.3s ease-out;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+    .blog_home_cta_btn:hover{
+      border-radius: 25px;
+    }
+    .user{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 15;
+      padding: 20px;
+    }
+    .user_letter{
+      width: 45px;
+      height: 45px;
+      padding: 10px;
+      background-image: linear-gradient(to right, pink,red);
+      border-radius: 50%;
+      font-family: 'Cookie', cursive;
+      color: darkgreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .user_name{
+      font-family: monospace;
+      background-image: radial-gradient(#E7FBBE,#E7FBBE);
+      border-radius: 25px 25px 25px 25px;
+      padding: 5px 15px;
+      color: brown;
+      border-left: none;
+      font-size: 20px;
+      box-shadow: 2px 2px 20px grey;
+      text-align: center;
+    }
+    .speedDial{
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 20px;
+      background: rgba( 255, 255, 255, 1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s all linear;
+    }
+  
+    .speedDial_list_item{
+      display: flex;
+      flex-wrap: nowrap;
+      font-family: "Roboto",sans-serif;
+      font-size: 17px;
+      margin-top: 10px;
+      transition: 0.3s ease-out;
+    }
+    .speedDial_list_item:first-child{
+       margin-top: 0;
+    }
+  .speedDial_list_item:hover{
+    background-image: linear-gradient(to right, rgb(248, 29, 21),rgb(45, 32, 235));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .loadingCircle {
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid rgba(250, 246, 246, 0.953);
+    border-radius: 50%;
+    animation: loadingRotate 800ms linear infinite;
+  }
+  .burgerIcon{
+    display: none;
+  }
+  
+  @keyframes loadingRotate {
+    to {
+      transform: rotateZ(-360deg);
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .navbar_wrapper{
+      padding: 0 10px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+     .burgerIcon{
+    display: block;
+    cursor: pointer;
+  }
+  .navItems{
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    width: 40%;
+    height: 300px;
+    clip-path: circle(100px at 90% -40%);
+    -webkit-clip-path: circle(100px at 90% -40%);
+    transition: 0.4s;
+    background-color: rgb(64, 65, 63);
+    border-radius: 10px;
+  }
+  .navItems_lists{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  #show_header{
+    clip-path: circle(1000px at 90% -20%);
+  -webkit-clip-path: circle(1000px at 90% -20%);
+  transition: 0.4s;
+  }
+  .navItem{
+    margin-left: 0;
+  }
+  .active:before{
+    width: 100%;
+    height: 40px;
+    content: "";
+    position: absolute;
+    padding: 0 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-image: linear-gradient(to right, coral,red);
+    z-index: -1;
+    border-radius: 10px;
+  }
+  .navItem:hover:before{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 10px;
+   }
+  }
+
+  @media screen and (max-width: 500px) {
+    .navItems{
+      left: 50%;
+      right: 0;
+      top: 60px;
+      width: 90%;
+      transform: translateX(-50%);
+      height: 450px;
+      font-size: 18px;
+      z-index: 100;
+    }
+  .login_signUp{
+    display: none;
+  }
+  .mbl_signUp,.mbl_login{
+    display: block;
+  }
+  .mbl_signUp{
+    border-radius: 10px;
+    background-color: black;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+  }
+  .mbl_login{
+    text-align: center;
+    background-color: black;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+ }
+ .blogCard{
+   width: 100%;
+   position: relative;
+   margin-left: 0;
+ }
+ .blogCard_info{
+   z-index: 1;
+ }
+ .imageContainer{
+  position: absolute;
+  z-index: 0;
+ }
+ .blogCard_image{
+   width: 300px;
+  object-fit: cover;
+  opacity: 50%;
+ }
+ .user{
+   position: fixed;
+   bottom: 20px;
+   left: 0px;
+ }
+ .user_name{
+  display: none;
 }
+.user_letter{
+  box-shadow: 5px 5px 20px black;
+  border: 3px solid green;
+  color: black;
+}
+.speedDial{
+  top: -170px;
+  left: 80%;
+}
+.adminBtn{
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  background-color: rgb(233, 21, 21);
+  color: white;
+}
+  }

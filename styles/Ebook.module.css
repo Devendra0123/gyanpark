@@ -1,0 +1,423 @@
+.ebook{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #313552;
+}
+.ebook_searchBar_search_input{
+    border: none;
+    background-color: rgba(27, 27, 27, 0.822);
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    padding: 10px 15px;
+    width: 300px;
+    color: white;
+    height: 30px;
+}
+.ebook_searchBar_search_input{
+    color: white;
+}
+.ebook_search_btn{
+    border: none;
+    padding: 6px 10px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-family: monospace;
+}
+.ebook_searchBar_searchBox{
+    display: flex;
+    align-items: center;
+}
+.ebook_searchBar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.ebook_category_btn{
+    border: none;
+    background-color: teal;
+    padding: 6px 10px;
+    border-radius: 25px;
+    color:rgb(255, 252, 251);
+    font-size: 15px;
+    margin-left: 15px;
+    font-family: monospace;
+    margin-top: 10px;
+}
+.ebook_category_btn:first-child{
+    margin-left: 0;
+}
+.ebook_category{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.ebookCard {
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+  }
+
+  .ebookCard_ring {
+    position: absolute;
+    top: 0;
+    width: 230px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(75deg);
+    z-index: 2;
+   
+  }
+  .ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid teal;
+    border-top: none;
+    border-left: none;
+  }
+  .ebookCard_image {
+    width: 180px;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+  }
+  .ebookCard_author {
+    width: 92%;
+    height: 40px;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7),rgba(128, 128, 128, 0.604));
+   
+  }
+  .ebookCard_author_text {
+    color: white;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+  }
+  .ebook_items{
+      width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .ebookDetail{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #655D8A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  .ebookDetail_top{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .ebookDetail_top_image{
+    width: 230px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px grey;
+  }
+  .ebookDetail_top_info{
+    width: 350px;
+    margin-left: 75px;
+  }
+  .ebookDetail_top_info_name{
+    font-family: monospace;
+    color: rgb(180, 247, 23);
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .ebookDetail_top_info_desc_span,.ebookDetail_top_info_author_span,.ebookDetail_top_info_publication_span{
+    font-size: 19px;
+    font-weight: 600;
+    font-family: monospace;
+  }
+  .ebookDetail_top_info_desc,.ebookDetail_top_info_author,.ebookDetail_top_info_publication{
+    font-family: "Roboto",sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .ebookDetail_top_info_openBtn{
+    background-image: linear-gradient(to right,rgb(78, 77, 77),rgb(19, 18, 18));
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    margin-top: 15px;
+    border: 2px solid white;
+  }
+  .ebookDetail_top_info_openBtn:hover{
+    border: 2px solid rgb(56, 5, 241);
+    color: rgb(12, 28, 243);  
+    background-image: none;
+    background-color: none;
+    background: none;
+  }
+  .ebookDetail_top_info_downloadBtn{   
+    background-image: linear-gradient(to right,rgb(235, 59, 59),rgb(240, 21, 21));
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    margin-top: 15px;
+    border: 2px solid white;
+    margin-left: 10px;
+  }
+  .ebookDetail_top_info_downloadBtn:hover{
+    border: 2px solid rgb(248, 41, 41);
+    color: rgb(248, 41, 41);  
+    background-image: none;
+    background-color: none;
+    background: none;
+  }
+  .ebookDetail_bottom_preview_images{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .ebookDetail_bottom_preview_img{
+    width: 150px;
+    height: 180px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .ebookDetail_bottom_preview_img:first-child{
+    margin-left: 0;
+  }
+  .ebookDetail_bottom_preview_title{
+    font-size: 17px;
+    margin-top: 20px;
+    color: rgb(232, 212, 212);
+    font-family: monospace;
+  }
+  .page_preview_dialogue_box{
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.3s ease-out;
+    border-radius: 5px;
+    background-color: pink;
+  }
+  .page_preview_dialogue_box_img{
+    object-fit: contain;
+    width: 100%;
+    height: 600px;
+  }
+  .cross {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+    top: 0px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .line1,
+  .line2 {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+  }
+  .line1 {
+    transform: rotate(50deg);
+  }
+  .line2 {
+    transform: rotate(-50deg);
+  }
+  .payEbookBox{
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(45deg,grey,black);
+    padding: 20px;
+    z-index: 10;
+  }
+  .ebook_id{
+     color: rgb(179, 174, 174);
+     font-size: 14px;
+  }
+  .ebook_pay_box_password_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ebook_pay_box_password_section_text{
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+    height: 35px;
+    padding: 10px 15px;
+  }
+  .ebook_pay_box_password_section_download_btn{
+    border: none;
+    padding: 10px 15px;
+    background-image: linear-gradient(to right,rgb(231, 43, 74),red);
+    font-size: 15px;
+    border-radius: 0 5px 5px 0;
+  }
+.payEbookBox_note_section_span{
+  font-weight: 700;
+  font-size: 17px;
+}
+.payEbookBox_note_section_text{
+  font-family: Roboto,sans-serif;
+  font-size: 15px;
+  color: white;
+}
+.payEbookBox_paymentInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payEbookBox_paymentInfo_esewa,.payEbookBox_paymentInfo_recharge{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg,grey,white);
+  padding: 20px;
+  margin-top: 5px;
+}
+.payEbookBox_paymentInfo_recharge{
+  margin-left: 30px;
+}
+.pagination_btn{
+  color: white;
+  padding: 6px 15px;
+  border: 2px solid rgb(230, 221, 221);
+  margin-left: 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  letter-spacing: 1.3px;
+  font-weight: 550;
+  background-image: radial-gradient(rgb(238, 9, 9),rgba(62, 87, 230, 0.761));
+}
+.pagination_btn:first-child{
+  margin-left: 0;
+}
+
+
+@media screen and (max-width: 500px) {
+  .ebookCard {
+    transform: rotate(0deg);
+  }
+  .ebookDetail_top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ebookDetail_top_info{
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+  .ebookDetail_bottom_preview_title{
+    padding: 10px;
+  }
+  .ebookDetail_bottom_preview_images{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .ebookDetail_bottom_preview_img{
+    margin-left: 0px;
+   margin-top: 20px;
+  }
+  .page_preview_dialogue_box{
+    width: 95%;
+    top: 150%;
+  }
+  .page_preview_dialogue_box_img{
+    object-fit: contain;
+    width: 100%;
+   height: 350px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ebook_searchBar{
+    width: 100%;
+  }
+  .ebook_searchBar_searchBox{
+    width: 100%;
+    padding: 0 10px;
+}
+.ebook_searchBar_search_input{
+  flex: 1;
+  padding: 5px;
+}
+.ebook_search_btn{
+  padding: 6px 5px;
+  color: white;
+  font-size: 14px;
+}
+.ebookCard_ring {
+ display: none;
+}
+  }

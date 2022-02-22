@@ -1,0 +1,265 @@
+.signup,.login,.resetPassword{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #313552;;
+}
+.signup_container,.resetPassword_container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+}
+.signup_google{
+    width: 500px;
+    background-color:#0d8a1a;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    padding: 2px;
+  }
+  .signup_google_svg_container{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+  .signup_google_text_container{
+    flex-grow:1;
+    display:flex;
+    justify-content: center;
+    border-radius: 25px;
+  }
+  .signup_container_form{
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .signUpEmail,.signUpName,.signUpPassword{
+      width: 70%;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      background-color: rgb(240, 236, 236);
+      padding: 5px;
+      border-radius: 5px;
+  }
+  .mailIcon,.lockOpenIcon,.faceIcon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .formInput{
+      outline: none;
+      border: none;
+      padding: 5px 10px;
+      background-color: transparent;
+      flex-grow: 1;
+  }
+  .registerImage{
+      width: 70%;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      justify-content: flex-start;
+      padding: 5px;
+  }
+  .formInput_image{
+      margin-left: 10px;
+  }
+  .signUpBtn,.loginBtn,.submitBtn,.successMessage_div_btn{
+    border: none;
+    background-image: linear-gradient(to right, coral,red);
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    letter-spacing: 1.3px;
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+  }
+  .signUpBtn:hover,.loginBtn:hover,.successMessage_div_btn:hover,.submitBtn:hover{
+    background-image:  linear-gradient(to right, rgb(247, 72, 8),rgb(238, 38, 2));
+    border-radius: 25px;
+  }
+  .forgotPassword_txt{
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .forgotPassword_txt:hover{
+    color: blue;
+  }
+
+  .error{
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .errorSpan{
+     position: absolute;
+     width: 30px;
+     height: 30px;
+     background-color: rgb(99, 100, 156);
+     padding: 5px;
+     border-radius: 50%;
+     font-weight: 700;
+     right: 0;
+     top: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: rgb(228, 215, 38);
+     cursor: pointer;
+  }
+  .forgot_password,.message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 20px;
+    background: rgb(29, 28, 28);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .enterEmailBar{
+    width: 350px;
+  }
+  .forgot_password_title{
+    font-weight: 600;
+    color: rgb(100, 100, 231);
+    margin-bottom: 10px;
+  }
+  .cross {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5px;
+    top: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .line1,
+  .line2 {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+  }
+  .line1 {
+    transform: rotate(50deg);
+  }
+  .line2 {
+    transform: rotate(-50deg);
+  }
+  .resetInput{
+    flex: 1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 60%;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    letter-spacing: 1.3px;
+  }
+  .resetInput::placeholder{
+    color: rgb(241, 229, 229);
+    font-size: 16px;
+  }
+  .resetPasswordInput{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 60%;
+    background-color: rgb(56, 126, 230);
+    outline: none;
+    color: white;
+    letter-spacing: 1.3px;
+    margin-top: 15px;
+  }
+  .resetPasswordInput::placeholder{
+    color: black;
+    font-size: 16px;
+  }
+  .successMessage_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .successMessage_div_text{
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 560px) {
+    .signup_container,.resetPassword_container{
+      width: 95%;
+    }
+    .signup_container_form{
+      width: 95%;
+  }
+  .signup_google{
+    width: 100%;
+  }
+    }
+
+    @media screen and (max-width: 400px) {
+      .signup_google{
+        border-radius: 10px;
+      }
+      .signup_container{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .signup_container_form{
+        width: 100%;
+    }
+    .signUpEmail,.signUpName,.signUpPassword,.resetPasswordInput{
+      width: 100%;
+  }
+  .forgot_password,.message{
+   width: 95%;
+   padding: 20px 5px;
+  }
+  .enterEmailBar{
+    width: 95%;
+  }
+      }

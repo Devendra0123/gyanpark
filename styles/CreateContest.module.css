@@ -1,0 +1,281 @@
+.createContest{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #655D8A;
+  position: relative;
+}
+.createContest_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.textInput,.textarea{
+    border: none;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+.fieldset{
+   margin-top: 20px;
+   width: 350px;
+   border-radius: 10px;
+   background-color: white;
+   border: none;
+   padding: 10px;
+}
+.organizertextInput{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    background: rgba(121, 118, 118, 0.25);
+    box-shadow: 0 2px 5px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.legend{
+    margin-left: 10px;
+    padding: 5px 10px;
+    background: rgba(121, 118, 118, 0.25);
+    box-shadow: 0 2px 5px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 25px;
+    font-family: "Roboto",sans-serif;
+}
+.otp::placeholder{
+   color: rgb(225, 230, 240);
+}
+.createContest_container_left{
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+}
+.createContest_container_right{
+  margin-top: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+}
+.time{
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radioBtn{
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    width: 30px;
+    height: 30px;
+    content: none;
+    outline: none;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: rgba(128, 128, 128, 0.699);
+  }
+  
+  .radioBtn:checked {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    content: none;
+    border: none;
+  }
+  
+  .radioBtn:checked::before {
+    position: absolute;
+    color: green !important;
+    content: "\00A0\2713\00A0" !important;
+    border: 1px solid #d3d3d3;
+    font-weight: bolder;
+    font-size: 21px;
+  }
+  .optionAndTimer_container{
+    display: flex;
+    align-items: center;
+  }
+  .questionBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 15px;
+    width: 100%;
+  }
+  .optionDiv {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: cadetblue;
+    border-radius: 5px;
+  }
+
+  .questionInput{
+    width: 100%;
+    height: 35px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .optionInput{
+    width: 250px;
+    height: 30px;
+    border: none;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(23, 23, 24);
+  }
+  .optionInput::placeholder{
+    color: rgb(65, 61, 61)
+  }
+  .solutionTextarea{
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(65, 98, 207, 0.45);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    font-size: 15px;
+  }
+  .createContest_container_right_create_question{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+  }
+.removeBtn{
+  padding: 5px 8px;
+  border-radius: 10px;
+  background-color: darkred;
+  color: white;
+  border: 2px solid white;
+  font-size: 15px;
+}
+.addMore_btn{
+  padding: 5px 8px;
+  border-radius: 10px;
+  background-color: rgb(33, 46, 228);
+  border: 2px solid white;
+  color: white;
+  font-size: 15px;
+}
+.message{
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 10;
+  border-radius: 10px;
+}
+.cross {
+position: absolute;
+width: 30px;
+height: 30px;
+background-color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+right: 5px;
+top: 5px;
+border-radius: 25px;
+cursor: pointer;
+}
+.line1,
+.line2 {
+position: absolute;
+width: 20px;
+height: 3px;
+background-color: black;
+}
+.line1 {
+transform: rotate(50deg);
+}
+.line2 {
+transform: rotate(-50deg);
+}
+
+@media screen and (max-width: 900px) {
+  .createContest_container{
+    flex-direction: column;
+    align-items: center;
+}
+.createContest_container_left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.createContest_container_right{
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 700px) {
+  .optionAndTimer_container{
+   flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .createContest_container_right{
+    padding: 0;
+  }
+  .createContest_container_right_create_question{
+   padding: 0;
+  }
+  .fieldset{
+    width: 95%;
+    padding: 5px 0;
+ }
+ .optionDiv{
+   width: 100%;
+   padding: 0;
+ }
+ .optionInput{
+  width: 100%;
+}
+.solutionTextarea{
+  width: 100%;
+}
+.organizertextInput{
+  margin-left: 0;
+  padding: 5px;
+}
+.textInput,.textarea{
+ padding: 5px;
+}
+.message{
+width: 95%;
+}
+}

@@ -1,0 +1,88 @@
+.cross {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5px;
+    top: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .line1,
+  .line2 {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+  }
+  .line1 {
+    transform: rotate(50deg);
+  }
+  .line2 {
+    transform: rotate(-50deg);
+  }
+  .questionPopup{
+    height: 90vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: pink;
+    padding: 20px 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 75;
+  }
+  .questionPopup::-webkit-scrollbar {
+   display: none;
+  }
+
+  .eachQuestiion{
+    padding: 10px;
+    width: 100%;
+  }
+  .question{
+    width: 100%;
+    text-align: left;
+    font-family: monospace;
+    font-size: 18px;
+  }
+  .option{
+    padding: 5px 10px;
+    font-family: 'Roboto',sans-serif;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+  }
+  .correctAnswer{
+    background-color: rgb(8, 139, 8);
+    color: white;
+  }
+.solution{
+  position: relative;
+  width: 100%;
+  box-shadow: inset 2px 2px 10px grey;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: rgb(201, 195, 195);
+  font-family: "Roboto",sans-serif
+}
+
+  @media screen and (max-width: 700px) {
+    .questionPopup{
+    width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .questionPopup{  
+      padding: 20px 10px;
+    }
+  }

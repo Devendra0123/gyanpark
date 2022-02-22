@@ -1,0 +1,113 @@
+.order,.allOrders{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #655D8A;
+}
+.orderHistory{
+    width: 500px;
+    background-image: linear-gradient(45deg,rgb(218, 208, 208),rgb(233, 220, 220));
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.orderTable{
+    font-family: Arial, Helvetica, sans-serif;
+   width: 90%;
+   border-collapse: collapse;
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+.orderHeader{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.orderDetails{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.td,.th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.td{
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    color: brown;
+}
+.th{
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.tr:nth-child(even){background-color: #f2f2f2;}
+.tr:nth-child(odd){background-color: rgba(172, 160, 160, 0.624);}
+.tr:hover{
+    background-color: rgb(109, 57, 231);
+    cursor: pointer;
+   
+}
+.tr:hover .td{
+    color: white;
+}
+.order_details_cotainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+    position: relative;
+}
+
+@media screen and (max-width: 500px) {
+    .orderHistory{
+        width: 100%
+    }
+    .orderTable{
+       width: 95%;
+    }
+    .td{
+        font-size: 12px;
+    }
+   .delivery,.paid{
+       display: none;
+   }
+    }
+
+    @media screen and (max-width: 400px) {
+        .order_details_cotainer{
+            width: 100%;
+            padding: 20px;
+            font-size: 15px;
+            overflow-x: scroll;
+            align-items: flex-start;
+        }
+        .orderDetail_table{
+            width: 95%;
+
+        }
+        .th{
+            font-size: 14px;
+        }
+        }

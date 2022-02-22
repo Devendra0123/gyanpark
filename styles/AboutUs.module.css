@@ -1,0 +1,64 @@
+.aboutUs,.admin{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #313552;
+    position: relative;
+}
+.aboutUs_top{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+.aboutUs_btn{
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 200px;
+}
+.aboutUs_middle{
+    width: 700px;
+    margin-top: 20px;
+    backdrop-filter: blur(1px) saturate(163%);
+    -webkit-backdrop-filter: blur(1px) saturate(163%);
+    background-color: rgba(255, 255, 255, 0.54);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding: 10px 15px;
+}
+.paragraph{
+    font-family: "Roboto",sans-serif;
+    margin-top: 10px;
+}
+.adminLink{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.adminLinkBtn{
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 700px) {
+    .aboutUs_middle{
+        width: 98%;
+    }
+    .aboutUs_btn{
+        margin-left: 20px;
+    }
+  }
