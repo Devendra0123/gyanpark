@@ -198,7 +198,7 @@ const goBack = ()=>{
                 <div className={styles.main}>
 
                    <div className={styles.main_left}>
-                       <span style={{borderRight:"3px solid brown",padding:"5px",fontSize:"17px",fontWeight:"550"}}>
+                       <span className={styles.questionNumber}>
                            { index + 1 } / { contestQuestions.length }
                        </span>
                    </div>

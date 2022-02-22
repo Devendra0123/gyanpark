@@ -95,7 +95,7 @@ const OrderDetail = ({orders}) => {
                      <tbody key={i}>
                      <tr className={styles.tr}>
                         <td>
-                          <Image src={`/upload/${item.image}`} width={50} height={60} />
+                          <Image src={`${process.env.NEXT_PUBLIC_URL}/upload/${item.image}`} width={50} height={60} alt='image' />
                         </td>
                         <td className={styles.td}> {item.name} </td>
                         <td className={styles.td}> Rs.{item.price} </td>

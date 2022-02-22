@@ -34,5 +34,6 @@
     }
     .inactive{
       padding: 5px;
+      opacity: 60%;
     }
 }

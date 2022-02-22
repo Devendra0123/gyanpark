@@ -204,6 +204,7 @@ margin-top: 10px;
       border-radius: 5px 0 0 5px;
       color: whitesmoke;
       font-size: 20px;
+      font-family: 'Roboto',sans-serif;
   }
   .time_span_text{
     background-color: rgb(141, 145, 148);
@@ -211,6 +212,13 @@ margin-top: 10px;
     letter-spacing: 1.5px;
     font-size: 18px;
     border-radius: 0 5px 5px 0;
+    font-family: 'Roboto',sans-serif;
+  }
+  .questionNumber{
+    border-right:3px solid brown;
+    padding:5px;
+    font-size:17px;
+    font-weight:550
   }
   .main{
       width: 100%;
@@ -460,9 +468,16 @@ margin-top: 10px;
     }
     .quiz_competetion_main{
         width: 100%;
+        min-height: 400px;
         padding: 5px 0px;
         padding-left: 5px;
-        margin-top: 20px;
+        margin-top: 40px;
+      }
+      .questionNumber{
+        border-right: none;
+        background-color: brown;
+        color: white;
+        border-radius: 10px;
       }
       .quiz_competetion_top{
         width: 100%;
@@ -497,7 +512,7 @@ margin-top: 10px;
     }
     .option{
         font-size: 16px;
-        padding: 5px 0px;
+        padding: 10px 10px;
     }
   .quiz_contest_home_body_joinContest_image{
       margin-left:-300px;
