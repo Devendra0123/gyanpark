@@ -352,6 +352,9 @@
     flex-direction: column;
     align-items: center;
   }
+  .singleProduct_details_info{
+    padding: 20px;
+  }
   .singleProduct_reviews{
     display: flex;
     flex-wrap: wrap;

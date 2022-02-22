@@ -97,7 +97,7 @@ useEffect(() => {
                </Link>               
                :  <div className={styles.user} onMouseEnter={()=> setDisplaySpeedDial(true)} onMouseLeave={()=> setDisplaySpeedDial(false)}>
                  <div style={{display:"flex",alignItems:"center"}}>
-                   <h1 className={styles.user_letter}>
+                   <h1 onClick={()=> setDisplaySpeedDial(true)} className={styles.user_letter}>
                     {`${user?.name?.charAt(0)}`}
                     </h1>
                     <p className={styles.user_name}>{user.name}</p>

@@ -64,7 +64,7 @@ const Sart = ({cartItems}) => {
                    <CartItem
                     itemName={item.productName}
                     itemPrice={item.productPrice}
-                    itemImage={`/upload/${item.productImage}`}
+                    itemImage={`${process.env.NEXT_PUBLIC_URL}/upload/${item.productImage}`}
                     removeItem={()=>removeFromCart(item.productId)}
                     productId={item.productId}
                    />

@@ -266,6 +266,7 @@ margin-top: 20px;
       font-size: 17px;
       margin-top: 10px;
       transition: 0.3s ease-out;
+      padding: 10px;
     }
     .speedDial_list_item:first-child{
        margin-top: 0;
@@ -419,8 +420,8 @@ margin-top: 20px;
   color: black;
 }
 .speedDial{
-  top: -170px;
-  left: 80%;
+  top: -220px;
+  left: 90%;
 }
 .adminBtn{
   position: fixed;
