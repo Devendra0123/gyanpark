@@ -35,7 +35,7 @@ const CreateBlog = () => {
       ]);
 
  
-      // handle input change
+      // handle change in input
       const handleInputChange = (e, index) => {
         const { name, value } = e.target;
         const list = [...inputList];
