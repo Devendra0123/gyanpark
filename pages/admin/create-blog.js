@@ -119,7 +119,7 @@ const CreateBlog = () => {
               }
             }
           ) ;
-        
+    
           const res = await axios.post(
             '/api/blog/upload-photo',                  
                  body,             

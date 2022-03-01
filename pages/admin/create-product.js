@@ -78,7 +78,7 @@ const CreateProduct = () => {
               }
             }
           ) ;
-        
+      
           const res = await axios.post(
             '/api/product/upload-photo',                  
                  body,             

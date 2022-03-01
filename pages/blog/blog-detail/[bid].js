@@ -49,7 +49,7 @@ const SingleBlog = ({blog,blogs}) => {
 
                             {
                               desc.images[0] && 
-                              <Image className={styles.details_info_img} src={`${process.env.NEXT_PUBLIC_URL}/blog/${desc.images[0]}`} alt='image' />
+                              <Image className={styles.details_info_img} src={`${process.env.NEXT_PUBLIC_URL}/blog/${desc.images[0]}`} width={1000} height={300} alt='image' />
                             }
                           
                             <div className={styles.detail_description}>
