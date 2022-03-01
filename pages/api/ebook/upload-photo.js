@@ -18,7 +18,7 @@ export default function uploadFormFiles( req, res) {
     form
       .on("file", (name, file) => {
         const data = fs.readFileSync(file.path);
-        fs.writeFileSync(`public/ebook/${file.name}`, data);
+        fs.writeFileSync(`/public/ebook/${file.name}`, data);
         fs.unlinkSync(file.path);
       })
       .on("aborted", () => {
