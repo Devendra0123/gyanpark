@@ -16,6 +16,7 @@ import Head from 'next/head'
   
 const SingleProduct = ({product}) => {
   const router = useRouter();
+    const [height,setHeight] = useState();
     const [opening, setOpening] = useState(false);
     const [loginPopup, setLoginPopup] = useState(false);
     const [reviewDialog, setReviewDialog] = useState(false);
@@ -33,6 +34,8 @@ const SingleProduct = ({product}) => {
     };
 
     const handleReviewBtn = ()=>{
+      const offsetHeight = window.pageYOffset;
+      setHeight(offsetHeight);
       if(!userInfo){
         setOpening(true)
         setLoginPopup(true)
@@ -159,7 +162,10 @@ const SingleProduct = ({product}) => {
                     {reviewDialog && <SubmitReviewDialogue cancel={handleCross} />}
                     {
                       loginPopup && 
-                      <div className={styles.loginDialog}>
+                      <div className={styles.loginDialog} style={{
+                                      position:'absolute',
+                                      top:`${height}+30px`
+                                                                }}>
                         <h3>Please Login first</h3>
                     
                            <button onClick={redirectLogin} style={{padding:'8px 12px',border:'none',borderRadius:'5px',backgroundColor:'blue',color:'white',fontWeight:'550',letterSpacing:'1.3px',marginTop:'10px'}}>
