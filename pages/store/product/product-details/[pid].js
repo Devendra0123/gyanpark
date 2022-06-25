@@ -34,7 +34,7 @@ const SingleProduct = ({product}) => {
     };
 
     const handleReviewBtn = ()=>{
-      const offsetHeight = window.pageYOffset;
+      const offsetHeight = window.pageYOffset + 30;
       setHeight(offsetHeight);
       if(!userInfo){
         setOpening(true)
@@ -164,7 +164,7 @@ const SingleProduct = ({product}) => {
                       loginPopup && 
                       <div className={styles.loginDialog} style={{
                                       position:'absolute',
-                                      top:`${height}+30px`
+                                      top:height
                                                                 }}>
                         <h3>Please Login first</h3>
                     
