@@ -34,8 +34,8 @@ const SingleProduct = ({product}) => {
     };
 
     const handleReviewBtn = ()=>{
-      const offsetHeight = window.pageYOffset + 30;
-      setHeight(offsetHeight);
+      const offsetHeight = window.pageYOffset;
+      setHeight(offsetHeight+100);
       if(!userInfo){
         setOpening(true)
         setLoginPopup(true)
